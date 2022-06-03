@@ -44,9 +44,9 @@ jobs:
         run: |
           pip3 install websockets six python-dateutil urllib3 aiohttp
           npm install @openapitools/openapi-generator-cli -g
-          cp ${{ github.workspace }}/virtual-device-test.py ${{ github.workspace }}/avh-api/python/examples/async/.
+          cp ${{ github.workspace }}/stm32_bsp_test.py ${{ github.workspace }}/avh-api/python/examples/async/.
           cd avh-api/python
-          make examples/async/virtual-device-test.py
+          make examples/async/stm32_bsp_test.py
   physical-device-test:
     runs-on: self-hosted
     needs: build
